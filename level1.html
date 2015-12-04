@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> Lab 1 </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage darkroom;
+
+void setup()
+{
+size( 1500, 1000 );
+background(10,255,255);
+frameRate( 30 );
+
+darkroom = loadImage("Picture/Darkroom.png");
+
+}
+
+
+void draw()
+{
+image(darkroom,0,0);
+fill(255,255,0);
+text("Background",600,50);
+text("There was a guy, named Jake billion, with his name; he became a billionaire, ",50,120);
+text("which his net was worth 60 billion dollars. He was famous for his generosity, and ",50,140);
+text("giving to the charity but not only that, he was friends with actress and actor in ",50,160);
+text("both Bollywood and hollywood, he had a size of a lion heart with kind. He had ",50,180);
+text("everything, except love, love was missing from his life; so he would go to place ",50,200);
+text("where people don't really know him that much, like some parts of Europe and some parts ",50,220);
+text("in Asia. ",50,240);
+text("One day, Jake in a different country finding love and going to beautiful sites of the ",50,260);
+text("country/city; he ended bumped into his love - love at first sight. when he bumped into ",50,280);
+text("her, she had things in her hands which was dropped. Helping her, Jake asked “Hi, there.",50,300);
+text("I am lost at finding the coffee place, would you please help me to finding the best ",50,320);
+text("coffee place?” She replied “Sure, I ain't busy. “ at the coffee place, he didn't drink ",50,340);
+text("coffee and told her that he want to go out with you and would like to spend time getting ",50,360);
+text("to know you. This relationship continued, then suddenly they had a very strong relationship, ",50,380);
+text("got married, but at the marriage (marriage with an agreement, that all my wealth I make,",50,400);
+text("will stick with me). She agreed and she was thinking that he doesn’t really make a ",50,420);
+text("lot (reasonable). Then after, being married, he told her the truth about his life, that ",50,440);
+text("who he is; the way he showed her was by taking his private jet back to US. Answering her ",50,460);
+text("question “who’s jet is this? where, how??... “ Jake answered it all, by saying and telling",50,480);
+text("who he is and what he does. ",50,500);
+text("At first, she didn't believe then the pilot came to tell her who he is. She was really ",50,520);
+text("happy, but was curious before, she had a feeling. But neither did Jake completely knew ",50,540);
+text("about her, that actually she goes after people with money. after a year in US",50,560);
+text("she started to get bored and there was not a lot of excitement due he being really busy ",50,580);
+text("to stay a billionaire, so she started to have affair with a garden worker, saying “I ",50,600);
+text("don't have any excitement”. After keeping the affair hidden, the gardener told her; let’s ",50,620);
+text("steal all his money in his vault, but in his vault only a maximum would be able to fit ",50,640);
+text("(50 million), they both said that it is enough to live our life together. She and the ",50,660);
+text("worker, one day to decide to put some pills (sleeping pill) in his drink, after he was ",50,680);
+text("knock out for 12 hours, his wife with the worker laughed in joy and went to the vault, ",50,700);
+text("but neither she or he knew the lock and what does the vault has in. ",50,720);
+text("Extreme security, and 3 lock, and they forgot and didn't knew that there is a hidden camera ",50,740);
+text("in the passcode, where it scan the ring which Jake always wear, and if it doesn't scan it; ",50,760);
+text("then it secretly alerts the police and swat team. They will take at least 5 minutes to reach,",50,780); 
+text("they don't have that have 5 minutes. With that if the passcode hidden camera doesn't scan ",50,800);
+text("the ring, it opens the safe to let them in and with another scanner that will scan the people ",50,820);
+text("who were outside and when they are inside, the safe lock would lock as quick as possible. ",50,840);
+text("Locking them up inside. ",50,860);
+text("Now there is a way out from inside with the solving the lock. ",50,880);
+rect(500,900,150,50);
+fill(255,0,0);
+text("ready for challenge",525,925);
+textSize(25);
+text("YOU ONLY HAVE 5 MINUTES TO FINISH IT!!!",400,875);
+
+if (mousePressed == true)
+
+{
+if (mouseButton == LEFT&&mouseX > 500 && mouseX < 650 && mouseY > 900 && mouseY<950)
+link("level2.html");
+
+}
+
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

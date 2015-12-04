@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> programming </title>
+<script src="Script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage bankvault;
+
+void setup()
+{
+
+size( 1250, 630 );
+background(0,0,0);
+frameRate( 30 );
+
+bankvault = loadImage("Images/bankvault.jpg");
+
+text("this is the vault, that you are stuck in",10,20);
+
+fill(0,200,0);
+textSize(25);
+text("	Click me to start	",20,50);
+
+
+}
+
+
+void draw()
+{
+image(bankvault,250,25);
+
+	if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && mouseX > 25 && mouseX < 210 && mouseY > 30 && mouseY < 55)
+		{
+		link("level3.html");
+		}
+	}
+	
+}
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

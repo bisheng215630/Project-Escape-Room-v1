@@ -1,0 +1,332 @@
+<html>
+<head>
+<title> Lab 1 </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage keypad;
+int y = 1;
+int x = 0;
+int a = 0;
+int b = 0;
+int c = 0;
+int d = 0;
+int count = 0;
+int password = 0;
+
+void setup()
+{
+
+size( 1000, 1000 );
+frameRate( 30 );
+
+keypad = loadImage("Picture/keypad.png");
+
+}
+
+void draw()
+{
+background(0,0,0);
+text(mouseX,10,10);
+text(mouseY,40,10);
+text(password,10,20);
+fill(255,255,0);
+rect(50,550,400,100);
+
+image(keypad,50,50);
+
+
+//first number
+
+if (mousePressed == true)
+
+{
+if (mouseButton == LEFT && y == 1)
+{
+if(mouseX > 50 && mouseX < 800 && mouseY > 50 && mouseY<490)
+{
+count = count + 1;
+y = 2;
+}
+}
+}
+if (mousePressed == false)
+{
+y = 1;
+}
+if(count == 1)
+{
+fill(255,0,0);
+text("*",50,600);
+}
+
+if(count == 2)
+{
+fill(255,0,0);
+text("*   *",50,600);
+}
+
+if(count == 3)
+{
+fill(255,0,0);
+text("*   *   *",50,600);
+}
+
+if(count == 4)
+{
+fill(255,0,0);
+text("*   *   *   *",50,600);
+}
+
+if(count == 1 && a == 0)
+{
+if(mouseX > 55 && mouseX < 795 && mouseY > 75 && mouseY<160)
+{
+password = password+1000*0;
+a = 1;
+}
+if(mouseX > 95 && mouseX < 155 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+a = 1;
+}
+if(mouseX > 170 && mouseX < 230 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*1;
+a = 1;
+}
+if(mouseX > 245 && mouseX < 460 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+a = 1;
+}
+if(mouseX > 470 && mouseX < 535 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*2;
+a = 1;
+}
+if(mouseX > 545 && mouseX < 760 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+a = 1;
+}
+if(mouseX > 170 && mouseX < 310 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+a = 1;
+}
+if(mouseX > 320 && mouseX < 380 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*3;
+a = 1;
+}
+if(mouseX > 395 && mouseX < 460 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+a = 1;
+}
+if(mouseX > 470 && mouseX < 530 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*4;
+a = 1;
+}
+if(mouseX > 545 && mouseX < 680 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+a = 1;
+}
+}
+
+if(count == 2 && b == 0)
+{
+if(mouseX > 55 && mouseX < 795 && mouseY > 75 && mouseY<160)
+{
+password = password+1000*0;
+b = 1;
+}
+if(mouseX > 95 && mouseX < 155 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+b = 1;
+}
+if(mouseX > 170 && mouseX < 230 && mouseY > 185 && mouseY<270)
+{
+password = password+100*1;
+b = 1;
+}
+if(mouseX > 245 && mouseX < 460 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+b = 1;
+}
+if(mouseX > 470 && mouseX < 535 && mouseY > 185 && mouseY<270)
+{
+password = password+100*2;
+b = 1;
+}
+if(mouseX > 545 && mouseX < 760 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+b = 1;
+}
+if(mouseX > 170 && mouseX < 310 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+b = 1;
+}
+if(mouseX > 320 && mouseX < 380 && mouseY > 290 && mouseY<380)
+{
+password = password+100*3;
+b = 1;
+}
+if(mouseX > 395 && mouseX < 460 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+b = 1;
+}
+if(mouseX > 470 && mouseX < 530 && mouseY > 290 && mouseY<380)
+{
+password = password+100*4;
+b = 1;
+}
+if(mouseX > 545 && mouseX < 680 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+b = 1;
+}
+}
+
+
+if(count == 3 && c == 0)
+{
+if(mouseX > 55 && mouseX < 795 && mouseY > 75 && mouseY<160)
+{
+password = password+1000*0;
+c = 1;
+}
+if(mouseX > 95 && mouseX < 155 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+c = 1;
+}
+if(mouseX > 170 && mouseX < 230 && mouseY > 185 && mouseY<270)
+{
+password = password+10*1;
+c = 1;
+}
+if(mouseX > 245 && mouseX < 460 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+c = 1;
+}
+if(mouseX > 470 && mouseX < 535 && mouseY > 185 && mouseY<270)
+{
+password = password+10*2;
+c = 1;
+}
+if(mouseX > 545 && mouseX < 760 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+c = 1;
+}
+if(mouseX > 170 && mouseX < 310 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+c = 1;
+}
+if(mouseX > 320 && mouseX < 380 && mouseY > 290 && mouseY<380)
+{
+password = password+10*3;
+c = 1;
+}
+if(mouseX > 395 && mouseX < 460 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+c = 1;
+}
+if(mouseX > 470 && mouseX < 530 && mouseY > 290 && mouseY<380)
+{
+password = password+10*4;
+c = 1;
+}
+if(mouseX > 545 && mouseX < 680 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+c = 1;
+}
+}
+
+if(count == 4 && d == 0)
+{
+if(mouseX > 55 && mouseX < 795 && mouseY > 75 && mouseY<160)
+{
+password = password+1000*0;
+d = 1;
+}
+if(mouseX > 95 && mouseX < 155 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+d = 1;
+}
+if(mouseX > 170 && mouseX < 230 && mouseY > 185 && mouseY<270)
+{
+password = password+1*1;
+d = 1;
+}
+if(mouseX > 245 && mouseX < 460 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+d = 1;
+}
+if(mouseX > 470 && mouseX < 535 && mouseY > 185 && mouseY<270)
+{
+password = password+1*2;
+d = 1;
+}
+if(mouseX > 545 && mouseX < 760 && mouseY > 185 && mouseY<270)
+{
+password = password+1000*0;
+d = 1;
+}
+if(mouseX > 170 && mouseX < 310 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+d = 1;
+}
+if(mouseX > 320 && mouseX < 380 && mouseY > 290 && mouseY<380)
+{
+password = password+1*3;
+d = 1;
+}
+if(mouseX > 395 && mouseX < 460 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+d = 1;
+}
+if(mouseX > 470 && mouseX < 530 && mouseY > 290 && mouseY<380)
+{
+password = password+1*4;
+d = 1;
+}
+if(mouseX > 545 && mouseX < 680 && mouseY > 290 && mouseY<380)
+{
+password = password+1000*0;
+d = 1;
+}
+}
+
+if(password == 2143)
+{
+link("level3.html")
+}
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
