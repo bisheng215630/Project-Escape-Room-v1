@@ -1,0 +1,478 @@
+<html>
+<head>
+<title> programming level 3 </title>
+<script src="Script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage number0;
+PImage number1;
+PImage number2;
+PImage number3;
+PImage number4;
+PImage number5;
+PImage number6;
+PImage number7;
+PImage number8;
+PImage number9;
+PImage numberstar;
+PImage Image1;
+PImage Image2;
+
+
+int x;
+int lock;
+int keyEntered; 
+int password;
+
+int rectLength; 
+int rectHeight;
+int rectGap;
+int code; 
+int power;
+
+void setup()
+{
+
+	size( 1000,500 );
+	background(0,0,0);
+	frameRate( 30 );
+	
+	rectLength = 100;
+	rectHeight = 100;
+	rectGap = 100;
+	
+	code = 0;
+	power = 1;
+	keyEntered = 0;
+	password = 0;
+	x = 0;
+	lock = 1;
+	
+	
+	
+	number0 = loadImage("Image/number 0.png");
+	number1 = loadImage("Image/number 1.png");
+	number2 = loadImage("Image/number 2.png");
+	number3 = loadImage("Image/number 3.png");
+	number4 = loadImage("Image/number 4.png");
+	number5 = loadImage("Image/number 5.png");
+	number6 = loadImage("Image/number 6.png");
+	number7 = loadImage("Image/number 7.png");
+	number8 = loadImage("Image/number 8.png");
+	number9 = loadImage("Image/number 9.png");
+	numberstar = loadImage("Image/star.png");
+	Image1 = loadImage("Image/lockkey3.png");
+	Image2 = loadImage("Image/Lock.png");
+
+
+}
+
+void draw()
+{
+	background(0,0,0);
+	fill(0,255,255);
+	text(x,10,50);
+	text(password,10,100);
+	textSize(23);
+	
+	
+	text("what year did was the bank founded?",500,140);
+	text("HINT",499,115);
+	
+		
+	image(Image1,-80,-450,600,1000);
+	image(Image2,500,250);
+	rect(50,50,100,100);
+	rect(160,50,100,100);
+	rect(270,50,100,100);
+	rect(50,160,100,100);
+	rect(160,160,100,100);
+	rect(270,160,100,100);
+	rect(50,270,100,100);
+	rect(160,270,100,100);
+	rect(270,270,100,100);
+	rect(160,380,100,100);
+	rect(500,150,400,100);
+	
+	
+	image(number1,50,50);
+	image(number2,160,50);
+	image(number3,270,50);
+	image(number4,50,160);
+	image(number5,160,160);
+	image(number6,270,160);
+	image(number7,50,270);
+	image(number8,160,270);
+	image(number9,270,270);
+	image(number0,160,380);
+		
+//first number
+	
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 50 && mouseY < 150 && mouseX > 50 && mouseX < 150)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 1000;
+				}
+				if (x == 2)
+				{
+					password = password + 100;
+				}
+				if (x == 3)
+				{
+					password = password + 10;
+				}
+				if (x == 4)
+				{
+					password = password + 1;
+				}
+				lock = 0;
+				image(numberstar,500,150);
+			}
+				
+		}
+	}
+	if(mousePressed == false)
+	{
+		lock = 1;
+	}
+	
+//second number
+
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 50 && mouseY < 150 && mouseX > 160 && mouseX < 260)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 2000;
+				}
+				if (x == 2)
+				{
+					password = password + 200;
+				}
+				if (x == 3)
+				{
+					password = password + 20;
+				}
+				if (x == 4)
+				{
+					password = password + 2;
+				}
+				lock = 0;
+			}
+			
+		}
+	}
+	if (mousePressed == false) 
+	{
+		lock = 1;
+	}
+
+//third number
+
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 50 && mouseY < 150 && mouseX > 270 && mouseX < 370)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 3000;
+				}
+				if (x == 2)
+				{
+					password = password + 300;
+				}
+				if (x == 3)
+				{
+					password = password + 30;
+				}
+				if (x == 4)
+				{
+					password = password + 3;
+				}	
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+		
+//Four Number
+
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 160 && mouseY < 260 && mouseX > 50 && mouseX < 150)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 4000;
+				}
+				if (x == 2)
+				{
+					password = password + 400;
+				}
+				if (x == 3)
+				{
+					password = password + 40;
+				}
+				if (x == 4)
+				{
+					password = password + 4;
+				}
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+//Five Number
+
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 160 && mouseY < 260 && mouseX > 160 && mouseX < 260)
+			{
+				x = x + 1;
+					if (x == 1)
+				{
+					password = password + 5000;
+				}
+				if (x == 2)
+				{
+					password = password + 500;
+				}
+				if (x == 3)
+				{
+					password = password + 50;
+				}
+				if (x == 4)
+				{
+					password = password + 5;
+				}
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+// Six Number
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 160 && mouseY < 260 && mouseX > 270 && mouseX < 370)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 6000;
+				}
+				if (x == 2)
+				{
+					password = password + 600;
+				}
+				if (x == 3)
+				{
+					password = password + 60;
+				}
+				if (x == 4)
+				{
+					password = password + 6;
+				}	
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+// seven number
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 270 && mouseY < 370 && mouseX > 50 && mouseX < 150)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 7000;
+				}
+				if (x == 2)
+				{
+					password = password + 700;
+				}
+				if (x == 3)
+				{
+					password = password + 70;
+				}
+				if (x == 4)
+				{
+					password = password + 7;
+				}	
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+//eight number
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 270 && mouseY < 370 && mouseX > 160 && mouseX < 260)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 8000;
+				}
+				if (x == 2)
+				{
+					password = password + 800;
+				}
+				if (x == 3)
+				{
+					password = password + 80;
+				}
+				if (x == 4)
+				{
+					password = password + 8;
+				}
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+
+//nine number
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 270 && mouseY < 370 && mouseX > 270 && mouseX < 370)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 9000;
+				}
+				if (x == 2)
+				{
+					password = password + 900;
+				}
+				if (x == 3)
+				{
+					password = password + 90;
+				}
+				if (x == 4)
+				{
+					password = password + 9;
+				}
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+//number zero
+if (mousePressed == true)
+	{
+		if (mouseButton == LEFT && lock == 1)
+		{
+			if (mouseY > 380 && mouseY < 480 && mouseX > 160 && mouseX < 260)
+			{
+				x = x + 1;
+				if (x == 1)
+				{
+					password = password + 0000;
+				}
+				if (x == 2)
+				{
+					password = password + 000;
+				}
+				if (x == 3)
+				{
+					password = password + 00;
+				}
+				if (x == 4)
+				{
+					password = password + 0;
+				}
+				lock = 0;
+			}
+		}
+	}
+	if (mousePressed == false)
+	{
+		lock = 1;
+	}
+	
+	if (password == 1865)
+	{
+		link("passed.html");
+	}
+	
+	if (x == 1)
+	{
+	image(numberstar,500,150);
+	}
+	if (x == 2)
+	{
+	image(numberstar,500,150);
+	image(numberstar,600,150);
+	}
+	if (x == 3)
+	{
+	image(numberstar,500,150);
+	image(numberstar,600,150);
+	image(numberstar,700,150);
+	}
+	if (x == 4)
+	{
+	image(numberstar,500,150);
+	image(numberstar,600,150);
+	image(numberstar,700,150);
+	image(numberstar,800,150);
+	}
+	
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
