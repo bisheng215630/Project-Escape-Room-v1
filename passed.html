@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> passed </title>
+<script src="Script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage Image3;
+PImage Image4;
+
+void setup(){
+
+size( 750, 500 );
+background(0,0,0);
+frameRate( 30 );
+
+
+//text("Congrats, you passed all the locks ",150,250);
+
+Image3 = loadImage("Image/bankvault.jpg");
+
+Image4 = loadImage("Image/congrats.png");
+
+
+}
+
+
+void draw()
+{
+
+image(Image3,0,0,750,500);
+//text("Congrats, you passed all the locks ",150,250);
+image(Image4,0,0,750,45);
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
